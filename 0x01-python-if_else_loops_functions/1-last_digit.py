@@ -1,7 +1,10 @@
 #!/usr/bin/python3
 import random
 number = random.randint(-10000, 10000)
-lastDigit = abs(number) % 10
+sign = 1
+if number < 0:
+    sign = -1
+lastDigit = (abs(number) % 10) * sign
 text = "Last digit of "
 if lastDigit > 5:
     text = text + f"{number} is {lastDigit} and is greater than 5"
