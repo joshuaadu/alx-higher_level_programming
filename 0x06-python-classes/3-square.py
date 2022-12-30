@@ -2,6 +2,7 @@
 
 """Define a class Square."""
 
+
 class Square:
     """Defines a square with with a size attribute of type integer
     and is greater than 0"""
