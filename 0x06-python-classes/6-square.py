@@ -64,7 +64,7 @@ class Square:
         """Validate position input"""
         try:
             if type(position) is tuple and len(position) == 2 \
-                    and type(position[0] == int) and type(position[1] == int):
+                    and all(isinstance(num, int) for num in position) and all(num >= 0 for num in position):
                 self.__position = position
             else:
                 msg = "position must be a tuple of 2 positive integers"
