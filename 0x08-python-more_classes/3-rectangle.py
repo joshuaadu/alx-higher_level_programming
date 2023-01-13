@@ -65,7 +65,6 @@ class Rectangle():
             return (2 * self.__height) + (2 * self.__width)
 
 
-
 if __name__ == "__main__":
     rect1 = Rectangle()
     rect1 = Rectangle(1, 2)
