@@ -71,4 +71,5 @@ if __name__ == "__main__":
     rect1 = Rectangle(1, 2)
     rect1 = Rectangle(2, 3)
     print(rect1.__class__)
+
     
