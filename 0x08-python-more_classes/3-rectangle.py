@@ -15,16 +15,10 @@ class Rectangle():
 
     @property
     def width(self):
-        """
-        Returns the width of the rectangle
-        """
         return self.__width
 
     @width.setter
     def width(self, value):
-        """
-        Sets the width of the rectangle
-        """
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
         if value < 0:
@@ -33,16 +27,10 @@ class Rectangle():
 
     @property
     def height(self):
-        """
-        Gets the height of the rectangle
-        """
-        return self.__width
+        return self.__height
 
     @height.setter
     def height(self, value):
-        """
-        Sets the height of the rectangle
-        """
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
         if value < 0:
@@ -64,11 +52,32 @@ class Rectangle():
         else:
             return (2 * self.__height) + (2 * self.__width)
 
+    def __str__(self):
+        """ Method that returns the Rectangle #
+
+        Returns:
+            str of the rectangle
+
+
+        """
+        rectangle = ""
+        if self.__width > 0:
+            for y in range(self.__height):
+                rectangle += ("#" * self.__width) + "\n"
+        return rectangle[:-1]
+
 
 if __name__ == "__main__":
-    rect1 = Rectangle()
-    rect1 = Rectangle(1, 2)
-    rect1 = Rectangle(2, 3)
-    print(rect1.__class__)
+    my_rectangle = Rectangle(2, 4)
+    print("Area: {} - Perimeter: {}".format(my_rectangle.area(),
+                                            my_rectangle.perimeter()))
 
-    
+    print(str(my_rectangle))
+    print(repr(my_rectangle))
+
+    print("--")
+
+    my_rectangle.width = 10
+    my_rectangle.height = 3
+    print(my_rectangle)
+    print(repr(my_rectangle))
