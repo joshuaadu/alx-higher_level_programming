@@ -6,11 +6,11 @@ This module defines an inherited list class MyList...
 
 class MyList(list):
     """Implements a sorted printing for the built-in list class"""
-    def __init__(self):
-        super()
 
     def print_sorted(self):
-        print(sorted(self))
+        l_sorted = self.copy()
+        l_sorted.sort()
+        print(l_sorted)
 
 
 if __name__ == "__main__":
