@@ -22,10 +22,12 @@ class Rectangle(BaseGeometry):
         return self.__height * self.__width
 
     def __repr__(self) -> str:
-        print("[Rectangle] {}/{}".format(self.__width, self.__height))
+        print("[{}] {}/{}".format(str(self.__class__.__name__), self.__width,
+                                  self.__height))
 
     def __str__(self) -> str:
-        return "[Rectangle] {}/{}".format(self.__width, self.__height)
+        return "[{}] {}/{}".format(str(self.__class__.__name__), self.__width,
+                                   self.__height)
 
 
 if __name__ == "__main__":
