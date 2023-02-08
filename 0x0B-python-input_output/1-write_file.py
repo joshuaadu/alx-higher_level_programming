@@ -13,7 +13,7 @@ def write_file(filename="", text=""):
         return f.write(text)
 
 
-if __name__ == "__main__":
-    nb_characters = write_file("text.txt",
-                               "This School is so cool!\n")
-    print(nb_characters)
+# if __name__ == "__main__":
+#     nb_characters = write_file("text.txt",
+#                                "This School is so cool!\n")
+#     print(nb_characters)
