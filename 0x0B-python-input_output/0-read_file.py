@@ -15,10 +15,25 @@ def read_file(filename=""):
 
 def read_file_binary(filename=""):
     with open(filename, "rb") as f:
+        # print(dir(f))
         read_data = f.read()
         print(read_data)
         print("tell:", f.tell())
-        f.seek(1)
+        f.seek(0)
+
+        """
+        Using the format() string method, you can print out the line number
+        and the line itself. The format specifier{:>4} means “print this
+        argument right-justified within 4 spaces.” The a_line variable
+        contains the complete line, carriage returns and all. The rstrip()
+        string method removes the trailing whitespace, including the
+        carriage return characters.
+        """
+        line_number = 0
+        for line in f:
+            line_number += 1
+            print('{:>4} {}'.format(line_number, line.rstrip()))
+
         print(f.read())
 
 
