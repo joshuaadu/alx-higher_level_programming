@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
-A module that defines a script
+A module that defines a script that adds all arguments to a Python list,
+and then save them to a file
 """
 import sys
 
