@@ -20,7 +20,7 @@ def save_to_json_file(my_obj, filename):
 #     save_to_json_file(my_list, filename)
 
 #     filename = "my_dict.json"
-#     my_dict = { 
+#     my_dict = {
 #         'id': 12,
 #         'name': "John",
 #         'places': [ "San Francisco", "Tokyo" ],
